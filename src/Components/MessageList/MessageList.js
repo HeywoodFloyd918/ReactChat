@@ -23,7 +23,7 @@ function MessageList() {
         return "light";
     }
     return (
-        < Container className = {""} >
+        <Container className = {"d-flex flex-column"} >
             {console.log(messages)}
             {
                 messages.map((item, i) => {

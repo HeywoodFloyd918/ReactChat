@@ -1,5 +1,5 @@
 import './App.css';
-import { Container, Row, Col , Spinner} from 'react-bootstrap';
+import { Container, Row, Col, Spinner } from 'react-bootstrap';
 import MessageList from './Components/MessageList/MessageList';
 import ChatForm from './Components/ChatForm/ChatForm';
 import ChatState from './Context/ChatState';
@@ -12,15 +12,15 @@ function App() {
     connect();
   }, [])
   return (
-    <Container>
+    <Container className={"justify-content-center"} >
       <Row className={"justify-content-center"}>
         Чатик
-        </Row>
+      </Row>
       {
         connection ?
           <>
-            <Row style={{height: "70vh"}}>
-                <MessageList></MessageList>
+            <Row style={{ height: "70vh"}}>
+              <MessageList></MessageList>
             </Row>
             <Row >
               <Col >
@@ -29,8 +29,8 @@ function App() {
             </Row>
           </>
           :
-          <Row>
-            <Spinner animation="grow" variant="secondary" />
+          <Row className={"justify-content-center"}>
+            <Spinner style={{ height: "20vh", width: "20vh" }} animation="border" variant="secondary" />
           </Row>
       }
 
